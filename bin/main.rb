@@ -1,19 +1,32 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/bot.rb'
-require_relative '../lib/music.rb'
+require_relative '../lib/quote.rb'
 
-bot = TelegramBot.new
+bots = TelegramBot.new
+quote = Quote.new
+playing = true
+count = 1
 
-start = true
-count += 1
 loop do
-  bot.create_request
-  puts "get random motivation quotes"
-  sleep 3600
-  bot.select_random
-  sleep 3600
+  puts " Welcome to My Jokes telegram bot "
+  bots
+  quote.create_request
+  puts "get random jokes"
+  sleep 100
   count += 1
-  i += 1
-  start = false
+  playing = false
 end
+
+# start = true
+# count += 1
+# loop do
+#   bot.create_request
+#   puts "get random motivation quotes"
+#   sleep 3600
+#   bot.select_random
+#   sleep 3600
+#   count += 1
+#   i += 1
+#   start = false
+# end
