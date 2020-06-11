@@ -3,13 +3,10 @@
 require 'telegram/bot'
 require_relative 'quote.rb'
 
+# rubocop:disable Metric/AbcSize, Metric/MethodLength, Layout/LineLength
 class TelegramBot
-  # attr_reader :content
-  # attr_writer :content
-
   def initialize
     token = '1159757607:AAFnVnePPURyMERtcAa-JFLs6DtclDya5YY'
-    # @content = ''
 
     Telegram::Bot::Client.run(token) do |bot|
       bot.listen do |message|
@@ -34,4 +31,5 @@ class TelegramBot
       end
     end
   end
+  # rubocop:enable Metric/AbcSize, Metric/MethodLength, Layout/LineLength
 end
