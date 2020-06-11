@@ -19,8 +19,8 @@ class TelegramBot
           values = Quote.new
           value = values.create_request
           valuer = JSON.parse(value)
-         
-          bot.api.send_message(chat_id: message.chat.id, text: "#{valuer['content']}", date: message.date)
+
+          bot.api.send_message(chat_id: message.chat.id, text: (valuer['content']).to_s, date: message.date)
         else bot.api.send_message(text: "Invalid entry,  #{message.from.first_name}")
         end
       end
