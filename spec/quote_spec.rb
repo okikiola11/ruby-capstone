@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require_relative '../lib/quote.rb'
 
 describe 'Quote' do
   describe '#create_request' do
-    let(:req) {Quote.new}
+    let(:req) { Quote.new }
     let(:req_json) { req.create_request }
 
     it 'should return json response when the request is sucessful' do
@@ -13,4 +15,4 @@ describe 'Quote' do
       expect(req_json.length).not_to eql(0)
     end
   end
-end 
+end

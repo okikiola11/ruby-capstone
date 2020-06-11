@@ -32,13 +32,3 @@ class Quote
   end
 end
 # disable rubocop: Metric/MethodLength, Metric/AbcSize
-
-values = Quote.new
-value = values.create_request
-valuer = JSON.parse(value)
-# valuer.each do |key, val|
-#   puts " #{key} "
-#   puts " #{val} "
-
-# end
-p valuer['content']
