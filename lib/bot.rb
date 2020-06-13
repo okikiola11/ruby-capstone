@@ -2,6 +2,7 @@
 
 require 'telegram/bot'
 require_relative 'quote.rb'
+require_relative 'motivation.rb'
 
 # rubocop:disable Metric/AbcSize, Metric/MethodLength, Layout/LineLength
 class TelegramBot
@@ -21,7 +22,13 @@ class TelegramBot
           valuer = JSON.parse(value)
 
           bot.api.send_message(chat_id: message.chat.id, text: (valuer['content']).to_s, date: message.date)
-        else bot.api.send_message(text: "Invalid entry,  #{message.from.first_name}")
+        when '/motivation'
+          values = Motivation.new
+          value = values.random_selection
+
+          bot.api.send_message(chat_id: message.chat.id, text: (value['text']).to_s, date: message.date)
+
+        else bot.api.send_message(chat_id: message.chat.id, text: "Invalid entry,  #{message.from.first_name}")
         end
       end
     end
