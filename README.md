@@ -1,6 +1,8 @@
 # Ruby capstone
 This is a real-world-like project, built with business specifications.    
 
+![Linters](https://github.com/okikiola11/ruby-capstone/workflows/Linters/badge.svg)
+
 ## Built With
 
 - Ruby, VSCODE
