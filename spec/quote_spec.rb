@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../lib/quote.rb'
+require_relative '../lib/motivation.rb'
 
 describe 'Quote' do
   describe '#create_request' do
@@ -11,8 +12,25 @@ describe 'Quote' do
       expect(req_json.class).to eql(String)
     end
 
-    it 'should return an array response is not empty' do
+    it 'should return an array response should not be empty' do
       expect(req_json.length).not_to eql(0)
     end
   end
+end
+
+describe 'Motivation' do
+  describe '#create_request' do
+    let(:req) { Motivation.new }
+    let(:req_json) { req.create_request }
+
+    it 'should return json response when the request is sucessful' do
+      expect(req_json.class).to eql(Array)
+    end
+
+    it 'should return an array response should not be empty' do
+      expect(req_json.length).not_to eql(0)
+    end
+  end
+
+  
 end

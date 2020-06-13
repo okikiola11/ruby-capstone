@@ -6,6 +6,7 @@ require_relative '../lib/quote.rb'
 
 TelegramBot.new
 quote = Quote.new
+motivation = Motivation.new
 playing = true
 count = 1
 
@@ -13,7 +14,10 @@ loop do
   puts ' Welcome to My Jokes telegram bot '
   quote.create_request
   puts 'get random jokes'
-  sleep 100
+  sleep 3600
+  motivation.create_request
+  puts 'get motivational words'
+  sleep 3600
   count += 1
   playing = false
 end
