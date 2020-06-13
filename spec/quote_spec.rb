@@ -32,5 +32,16 @@ describe 'Motivation' do
     end
   end
 
-  
+  describe '#random_selection' do
+    let(:selection) { Motivation.new }
+    let(:req_selection) { selection.random_selection }
+
+    it 'should return an Hash' do
+      expect(req_selection.class).to eql(Hash)
+    end
+
+    it 'should return a key and a value' do
+      expect(req_selection.length).to eql(2)
+    end
+  end
 end
