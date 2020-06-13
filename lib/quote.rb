@@ -9,6 +9,8 @@ require 'openssl'
 require_relative 'bot.rb'
 
 # disable rubocop: Metric/MethodLength, Metric/AbcSize
+
+# Gets quote from the API class
 class Quote
   @values = nil
 

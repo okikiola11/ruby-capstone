@@ -5,6 +5,7 @@ require 'net/http'
 require 'openssl'
 require 'json'
 
+# Gets Motivation from the API class
 class Motivation
   @values = nil
 

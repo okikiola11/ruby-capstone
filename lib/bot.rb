@@ -5,6 +5,8 @@ require_relative 'quote.rb'
 require_relative 'motivation.rb'
 
 # rubocop:disable Metric/AbcSize, Metric/MethodLength, Layout/LineLength
+
+# Gets the TelegramBot from the Telegram Client class
 class TelegramBot
   def initialize
     token = '1159757607:AAFnVnePPURyMERtcAa-JFLs6DtclDya5YY'
