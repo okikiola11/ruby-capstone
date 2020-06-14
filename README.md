@@ -1,5 +1,5 @@
 # Ruby capstone
-This is a real-world-like project, built with business specifications.    
+This is a real-world-like project, built with business specifications. This is the implementation of a Telegram bot that send jokes and motivations from differnt API url to the bot using the bot client. 
 
 ![Linters](https://github.com/okikiola11/ruby-capstone/workflows/Linters/badge.svg)
 
@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 - In your ruby terminal. Run
 run ruby bin/main.rb
 - On your Telegram account. Search for
-@eminibot
+@telegrambot
 
 - Then, type /start command and follow the instructions that comes right after
 ![screenshot](asset/screenshot2.png)
