@@ -3,7 +3,7 @@
 require_relative '../lib/quote.rb'
 require_relative '../lib/motivation.rb'
 
-RSpec.describe 'Quote' do
+describe 'Quote' do
   describe '#create_request' do
     let(:req) { Quote.new }
     let(:req_json) { req.create_request }
@@ -18,7 +18,7 @@ RSpec.describe 'Quote' do
   end
 end
 
-RSpec.describe 'Motivation' do
+describe 'Motivation' do
   describe '#create_request' do
     let(:req) { Motivation.new }
     let(:req_json) { req.create_request }

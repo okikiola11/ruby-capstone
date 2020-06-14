@@ -5,7 +5,11 @@ This is a real-world-like project, built with business specifications.
 
 ## Built With
 
-- Ruby, VSCODE
+- Ruby
+- Telegram bot
+- Joke RapidAPI
+- Motivation TypeAPI 
+- VSCODE
 
 ## Getting Started
 
@@ -16,11 +20,22 @@ To get a local copy up and running follow these simple example steps.
 - Web browser
 - Code editor
 - Git and Github
+- Telegram Desktop
 
 ### Usage
-- Clone the project to your local machine 
-- Open ruby-capstone.rb
-- Run ruby ruby-capstone.rb in your terminal 
+
+- Install Ruby on your system. Read <a href="https://www.ruby-lang.org/en/documentation/installation/">Ruby documentation</a>
+- Clone the project to your local machine (use git clone)
+- Open command prompt and run the following command
+![screenshot](asset/screenshot1.png)
+- In your ruby terminal. Run
+run ruby bin/main.rb
+- On your Telegram account. Search for
+@eminibot
+
+- Then, type /start command and follow the instructions that comes right after
+![screenshot](asset/screenshot2.png)
+
 
 ## Author
 - Okikiola Apelehin
@@ -43,7 +58,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Google
+- Google 
 
 ## 📝 License
 

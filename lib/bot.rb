@@ -15,7 +15,7 @@ class TelegramBot
       bot.listen do |message|
         case message.text
         when '/start'
-          bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}. Welcome to Telegram bot, created by Okikiola Apelehin")
+          bot.api.send_message(chat_id: message.chat.id, text: "Hello, #{message.from.first_name}. Welcome to Telegram bot, created by Okikiola Apelehin. Use /start to start, /quote to get quotes and / motivation to get motivations. Enjoy!!! ")
         when '/stop'
           bot.api.send_message(chat_id: message.chat.id, text: "Bye, #{message.from.first_name}", date: message.date)
         when '/quote'
