@@ -31,7 +31,7 @@ To get a local copy up and running follow these simple example steps.
 - In your ruby terminal. Run
 run ruby bin/main.rb
 - On your Telegram account. Search for
-@telegrambot
+@eminiibot
 
 - Then, type /start command and follow the instructions that comes right after
 ![screenshot](asset/screenshot2.png)
@@ -39,8 +39,6 @@ run ruby bin/main.rb
 
 ## Author
 - Okikiola Apelehin
-
-👤 **Author**
 
 - Github: [@okikiola11](https://github.com/okikiola11)
 - Twitter: [@Kikiolla3](https://twitter.com/Kikiolla3)

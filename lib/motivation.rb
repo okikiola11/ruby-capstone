@@ -5,24 +5,12 @@ require 'net/http'
 require 'openssl'
 require 'json'
 
+require_relative '../lib/super_bot.rb'
+require_relative 'telegram_bot.rb'
+
 # Gets Motivation from the API class
-class Motivation
-  @values = nil
-
-  def initialize
-    @values = create_request
-  end
-
-  def create_request
-    url = 'https://type.fit/api/quotes'
-    uri = URI(url)
-    response = Net::HTTP.get(uri)
-    response = JSON.parse(response)
-    response
-  end
-
+class Motivation < SuperBot
   def random_selection
-    @values = @values.sample
-    @values
+    @values.sample
   end
 end

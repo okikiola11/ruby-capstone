@@ -6,18 +6,13 @@ require 'uri'
 require 'net/http'
 require 'openssl'
 
-require_relative 'bot.rb'
+require_relative '../lib/super_bot.rb'
+require_relative 'telegram_bot.rb'
 
 # disable rubocop: Metric/MethodLength, Metric/AbcSize
 
 # Gets quote from the API class
-class Quote
-  @values = nil
-
-  def initialize
-    @values = create_request
-  end
-
+class Quote < SuperBot
   def create_request
     url = URI('https://joke3.p.rapidapi.com/v1/joke')
 
