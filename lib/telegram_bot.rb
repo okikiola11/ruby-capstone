@@ -3,17 +3,17 @@
 require 'telegram/bot'
 require_relative 'quote.rb'
 require_relative 'motivation.rb'
+# rubocop:disable Metric/AbcSize, Metric/MethodLength, Layout/LineLength
 
 # Gets the TelegramBot from the Telegram Client class
 class TelegramBot
-  
   attr_reader :details
   attr_writer :details
 
   def initialize
     @details = details
     token = '1159757607:AAFnVnePPURyMERtcAa-JFLs6DtclDya5YY'
-    
+
     Telegram::Bot::Client.run(token) do |bot|
       bot.listen do |message|
         case message.text
@@ -25,8 +25,8 @@ class TelegramBot
           values = Quote.new
           value = values.create_request
           @details = JSON.parse(value)
-          @details.each do |key, value|
-              bot.api.send_message(chat_id: message.chat.id, text: @details['content'].to_s, date: message.date)
+          @details.each do |_details|
+            bot.api.send_message(chat_id: message.chat.id, text: @details['content'].to_s, date: message.date)
           end
 
         when '/motivation'
