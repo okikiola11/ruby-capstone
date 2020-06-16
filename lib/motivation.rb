@@ -8,7 +8,7 @@ require 'json'
 require_relative '../lib/super_bot.rb'
 require_relative 'telegram_bot.rb'
 
-# Gets Motivation from the API class
+# Creates a new Client instance which proxies the requests from the API
 class Motivation < SuperBot
   def random_selection
     @values.sample

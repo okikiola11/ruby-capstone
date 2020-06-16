@@ -11,7 +11,7 @@ require_relative 'telegram_bot.rb'
 
 # disable rubocop: Metric/MethodLength, Metric/AbcSize
 
-# Gets quote from the API class
+# Creates a new Quote instance which proxies the requests from the API
 class Quote < SuperBot
   def create_request
     url = URI('https://joke3.p.rapidapi.com/v1/joke')
