@@ -15,7 +15,7 @@ describe 'SuperBot' do
     it 'should return an array response should not be empty' do
       expect(req_json.length).not_to eql(0)
     end
-  end  
+  end
 end
 
 describe 'Quote' do
